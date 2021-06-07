@@ -11,6 +11,10 @@
     );
 }
 
+/* *{
+  margin: 5px;
+} */
+
 body{
   background-color: #fce4ec;
   display: flex;
@@ -47,3 +51,61 @@ main {
 .black-text a{
   color: black;
  }
+
+ /* EXTERNAL LINKS */
+
+ .link-card{
+   /* margin: 5px; */
+   margin: 2px;
+   width: 250px;
+   height: 300px;
+   display: inline-block;
+   font-size: larger;
+ }
+
+
+
+ .suicide{
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .trevor{
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .pflag{
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theCenter{
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeOut{
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

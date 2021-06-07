@@ -19,13 +19,12 @@ const Footer = () => {
 						</h5>
             <p className="black-text">You can use rows and columns here to organize your footer content.</p>
           </div>
-            <div className="col l4 offset-l2 s12">
+            <div className="col l4 s12">
               <h5 className="black-text">Links</h5>
               	<ul>
-                  <li><a className='black-text' href="#!">Link 1</a></li>
-                  <li><a className='black-text' href="#!">Link 2</a></li>
-                  <li><a className='black-text' href="#!">Link 3</a></li>
-                  <li><a className='black-text' href="#!">Link 4</a></li>
+                  <li><a className='black-text' href="#!">Terms of Service</a></li>
+                  <li><a className='black-text' href="#!">About</a></li>
+                  <li><a className='black-text' href="#!">External Links</a></li>
                 </ul>
             </div>
           </div>
