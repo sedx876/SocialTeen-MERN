@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Menu from './core/Menu'
+import Footer from './core/Footer'
 
 
 const MainRouter = () => {
@@ -10,6 +11,7 @@ const MainRouter = () => {
 			<Switch>
 
 			</Switch>
+			<Footer/>
     </div>
     )
 }
