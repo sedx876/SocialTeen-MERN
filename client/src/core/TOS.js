@@ -2,8 +2,10 @@ import React from 'react'
 
 const TermsOfService = () => {
     return (
-      <div>
-				<h3 className='center'><strong>Website Standard Terms and Conditions</strong></h3>
+      <div className="tos-card col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 pink lighten-1">
+				<h3 className='center'>
+					<strong>PrideSupport Terms and Conditions</strong>
+				</h3>
 				<h5><strong>1. Introduction</strong></h5>
 				<p>These Website Standard Terms And Conditions (these “Terms” or 
 					these “Website Standard Terms And Conditions”) contained herein 

@@ -27,7 +27,7 @@ main {
 }
 
 .page-footer {
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;  
@@ -121,3 +121,13 @@ main {
 .mycard{
   margin-top: 30px;
 }
+
+/* TOS */
+
+.tos-card{
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+

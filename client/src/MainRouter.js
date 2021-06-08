@@ -6,6 +6,7 @@ import Home from './core/Home'
 import TOS from './core/TOS'
 import Links from './core/Links'
 import Signup from './user/Signup'
+import Signin from './user/Signin'
 
 
 const MainRouter = () => {
@@ -13,10 +14,11 @@ const MainRouter = () => {
     <div>
 			<Menu/>
 			<Switch>
-			<Route exact path='/' component={Home}/>
-			<Route path='/TOS' component={TOS}/>
-			<Route path='/links' component={Links}/>
-			<Route path='/signup' component={Signup}/>
+				<Route exact path='/' component={Home}/>
+				<Route path='/TOS' component={TOS}/>
+				<Route path='/links' component={Links}/>
+				<Route path='/signup' component={Signup}/>
+				<Route path='/signin' component={Signin}/>
 			</Switch>
 			<Footer/>
     </div>
