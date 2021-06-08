@@ -76,7 +76,7 @@ class Signup extends Component{
         </div>
       </div>
 			<button onClick={this.clickSubmit} 
-        className='btn waves-effect waves-light pink lighten-4 black-text center'>Submit</button>
+        className='btn waves-effect waves-light pink lighten-4 black-text center pulse'>Register</button>
     </form>
   </div>
 	)

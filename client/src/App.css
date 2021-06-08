@@ -131,3 +131,11 @@ main {
   margin: 10px auto;
 }
 
+/* PROFILE */
+.profile-card{
+  display: flex;
+  font-size: 20px;
+  width: 400px;
+  height: 400px;
+  margin: 5px;
+}

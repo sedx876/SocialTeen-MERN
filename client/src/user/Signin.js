@@ -63,8 +63,8 @@ class Signin extends Component{
           <label for="icon_password">Password</label>
         </div>
 				<button onClick={this.clickSubmit} 
-        	className='btn waves-effect waves-light pink lighten-4 black-text center'>
-					Submit
+        	className='btn waves-effect waves-light pink lighten-4 black-text center pulse'>
+					Log In
 				</button>
 		</form>
 		</div>
