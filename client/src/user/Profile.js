@@ -62,17 +62,30 @@ class Profile extends Component{
 
 	render(){
 		const { redirectToSignin, user, posts } = this.state
+		if (redirectToSignin) return <Redirect to="/signin" />
+    const photoUrl = user._id
+      ? `${process.env.REACT_APP_API_URL}/user/photo/${
+          user._id
+        }?${new Date().getTime()}`
+      : DefaultProfile
 		return(
-			<div>
+			<>
+				<div>
 				<h4 className='center'>
 					{`${isAuthenticated().user.name} Profile`}
 				</h4>
 				<div className='profile-card'>
-    			<div className="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 pink lighten-2">
+    			<div className="profile-card col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 pink lighten-1">
       			<div className="card large pink lighten-1">
         			<div className="card-image center">
 							<p className='center'><strong>Hello {user.name}</strong></p>
-          			<img src={DefaultProfile}/>
+							<img
+          			style={{ height: "auto", maxWidth: "100%" }}
+          			className="img-thumbnail center-align responsive-img"
+          			src={photoUrl}
+          			onError={i => (i.target.src = `${DefaultProfile}`)}
+          			alt={user.name}
+        			/>
         			</div>
         	<div className="card-content center">
 					<p className='pt-3'><strong>Email:</strong> {user.email}</p>
@@ -80,13 +93,8 @@ class Profile extends Component{
           	<strong>Joined: </strong> 
           	{`${new Date(user.created).toDateString()}`}
         	</p>
-					{isAuthenticated().user &&
-					<>
-					<div className='card'>
-							<h6 style={{textDecoration: 'underline'}}><strong>About Me:</strong></h6>
-							<p><strong>{user.about}</strong></p>
-						</div>
-					<div className="card">
+					
+					<div className="col hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 pink lighten-1">
 				<Link
     			className='btn waves-effect waves-light pink lighten-4 black-text center'
     			to={`/user/edit/${user._id}`}
@@ -94,18 +102,31 @@ class Profile extends Component{
     		Edit Profile
   			</Link>
         </div>
-					</>
-						
-						
-					}
         	</div>
+					</div>
+      
+    </div>
+		{isAuthenticated().user &&
+					<div>
+    <div class="col about-card hoverable">
+      <div class="card pink lighten-1">
+        <div class="card-content black-text">
+          <span class="card-title about-cardTitle">About Me:</span>
+          <p>
+						<strong>{user.about}</strong>
+					</p>
+        </div>
         
       </div>
     </div>
   </div>
+					}
+  </div>
 
 	
 	</div>
+			</>
+			
 		)
 	}
 }

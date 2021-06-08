@@ -107,62 +107,69 @@ class EditProfile extends Component {
     }
   
     editForm = (name, email, password, about) => (
-      <form>
-        <div className="form-group">
-          <label className="text-muted">Profile Photo</label>
-          <input
-            onChange={this.handleChange("photo")}
+        <>
+      <form class="col s12">
+
+       <div class="file-field input-field">
+        <div class="btn waves-effect waves-light pink lighten-4 black-text center">
+        <span>File</span>
+        <input onChange={this.handleChange("photo")}
             type="file"
             accept="image/*"
-            className="form-control"
-          />
+            className="form-control"/>
         </div>
+        <div class="file-path-wrapper">
+        <input class="file-path validate" type="text"/>
+      </div>
+     </div>
   
-        <div className="form-group">
-          <label className="text-muted">Name</label>
+        <div className="input-field col s6 center">
+          
           <input
             onChange={this.handleChange("name")}
             type="text"
-            className="form-control"
+            className="validate"
             value={name}
           />
+					{/* <label id="name" className="black-text">Name</label> */}
         </div>
   
-        <div className="form-group">
-          <label className="text-muted">Email</label>
+        <div className="input-field col s6">
+          {/* <label className="black-text">Email</label> */}
           <input
             onChange={this.handleChange("email")}
             type="email"
-            className="form-control"
+            className="validate"
             value={email}
           />
         </div>
   
         <div className="form-group">
-          <label className="text-muted">About</label>
+          <label className="black-text">About</label>
           <textarea
             onChange={this.handleChange("about")}
             type="text"
-            className="form-control"
+            className="validate"
             value={about}
           />
         </div>
   
-        <div className="form-group">
-          <label className="text-muted">Password</label>
+        <div className="input-field col s6">
+          <label className="black-text">Password</label>
           <input
             onChange={this.handleChange("password")}
             type="password"
-            className="form-control"
+            className="validate"
             value={password}
           />
         </div>
   
-        <button onClick={this.clickSubmit} 
-          className='btn btn-raised btn-outline-primary'>
-            Update Profile
-        </button>
       </form>
+      <button onClick={this.clickSubmit} 
+      className='btn waves-effect waves-light pink lighten-4 black-text center'>
+        Update Profile
+    </button>
+    </>
     )
   
     render(){
@@ -189,7 +196,7 @@ class EditProfile extends Component {
   
       return(
       <div className='container'>
-        <h2 className='mt-5 mb-5 text-primary text-center'>
+        <h2 className='black-text center'>
           <strong>Update Profile</strong>
         </h2>
   

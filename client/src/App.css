@@ -135,7 +135,25 @@ main {
 .profile-card{
   display: flex;
   font-size: 20px;
-  width: 400px;
+  width: 500px;
   /* height: auto; */
   margin: 5px;
 }
+
+.about-card{
+  display: flex;
+  font-size: 15px;
+  width: 500px;
+  height: auto;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.about-cardTitle{
+  text-decoration: underline;
+}
+
+/* #name{
+  text-align: center;
+} */
