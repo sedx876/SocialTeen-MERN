@@ -5,6 +5,7 @@ import Footer from './core/Footer'
 import Home from './core/Home'
 import TOS from './core/TOS'
 import Links from './core/Links'
+import Signup from './user/Signup'
 
 
 const MainRouter = () => {
@@ -15,6 +16,7 @@ const MainRouter = () => {
 			<Route exact path='/' component={Home}/>
 			<Route path='/TOS' component={TOS}/>
 			<Route path='/links' component={Links}/>
+			<Route path='/signup' component={Signup}/>
 			</Switch>
 			<Footer/>
     </div>

@@ -16,7 +16,7 @@
 } */
 
 body{
-  background-color: #fce4ec;
+  background-color: #f48fb1;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -108,4 +108,16 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* SIGNUP FORM */
+.auth-card{
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.mycard{
+  margin-top: 30px;
 }
