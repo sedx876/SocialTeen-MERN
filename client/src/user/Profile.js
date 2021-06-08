@@ -80,12 +80,13 @@ class Profile extends Component{
           	<strong>Joined: </strong> 
           	{`${new Date(user.created).toDateString()}`}
         	</p>
-					<p className="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 pink lighten-2"
-                style={{width: '30rem'}}>
-                <h5 style={{textDecoration: 'underline'}}><strong>About Me:</strong></h5>
-                <strong>{user.about}</strong></p>
-        	</div>
-        <div className="card-action center">
+					{isAuthenticated().user &&
+					<>
+					<div className='card'>
+							<h6 style={{textDecoration: 'underline'}}><strong>About Me:</strong></h6>
+							<p><strong>{user.about}</strong></p>
+						</div>
+					<div className="card">
 				<Link
     			className='btn waves-effect waves-light pink lighten-4 black-text center'
     			to={`/user/edit/${user._id}`}
@@ -93,6 +94,12 @@ class Profile extends Component{
     		Edit Profile
   			</Link>
         </div>
+					</>
+						
+						
+					}
+        	</div>
+        
       </div>
     </div>
   </div>

@@ -27,7 +27,7 @@ main {
 }
 
 .page-footer {
-  position: absolute;
+  /* position: relative; */
   left: 0;
   bottom: 0;
   width: 100%;  
@@ -136,6 +136,6 @@ main {
   display: flex;
   font-size: 20px;
   width: 400px;
-  height: 400px;
+  /* height: auto; */
   margin: 5px;
 }
