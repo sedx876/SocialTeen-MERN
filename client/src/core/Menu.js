@@ -38,6 +38,13 @@ const Menu = ({history}) => (
 
 				{isAuthenticated() &&
 					<>
+
+						<li>
+      				<Link to={`/posts`} style={isActive(history, `/posts`)} className="black-text">
+        				Post Feed
+      				</Link>
+    				</li>
+
 						<li className="nav-item">
       				<Link to={`/post/create`} style={isActive(history, `/post/create`)} className="black-text">
         				Create Post
