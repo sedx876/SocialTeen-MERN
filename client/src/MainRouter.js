@@ -11,6 +11,7 @@ import Profile from './user/Profile'
 import EditProfile from './user/EditProfile'
 import PrivateRoute from './auth/PrivateRoute'
 import Users from './user/Users'
+import NewPost from "./post/NewPost"
 
 
 const MainRouter = () => {
@@ -25,6 +26,7 @@ const MainRouter = () => {
 				<Route path='/signin' component={Signin}/>
 				<PrivateRoute exact path='/user/:userId' component={Profile}/>
 				<PrivateRoute exact path='/user/edit/:userId' component={EditProfile}/>
+				<PrivateRoute exact path="/post/create" component={NewPost} />
 				<Route exact path='/users' component={Users}/>
 			</Switch>
 			<Footer/>
