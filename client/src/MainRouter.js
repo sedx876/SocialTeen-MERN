@@ -15,6 +15,7 @@ import NewPost from "./post/NewPost"
 import Posts from './post/Posts'
 import EditPost from "./post/EditPost"
 import SinglePost from "./post/SinglePost"
+import FindPeople from "./user/FindPeople"
 
 
 const MainRouter = () => {
@@ -34,6 +35,7 @@ const MainRouter = () => {
 				<Route path='/posts' component={Posts}/>
 				<PrivateRoute exact path="/post/edit/:postId" component={EditPost}/>
 				<Route exact path="/post/:postId" component={SinglePost} />
+				<PrivateRoute exact path="/findpeople" component={FindPeople} />
 			</Switch>
 			<Footer/>
     </div>
