@@ -157,3 +157,14 @@ main {
 /* #name{
   text-align: center;
 } */
+
+/* MEMBER DIRECTORY */
+
+.member-card{
+   margin: 5px;
+   width: 200px;
+   /* height: auto; */
+   max-height: 500px;
+   display: inline-block;
+   font-size: larger;
+}

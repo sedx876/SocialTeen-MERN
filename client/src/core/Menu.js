@@ -30,6 +30,12 @@ const Menu = ({history}) => (
 					</Link>
 				</li>
 
+				<li>
+        	<Link style={isActive(history, '/users')} to="/users" className='black-text'>
+          	Members Directory
+        	</Link>
+      	</li>
+
 				{isAuthenticated() &&
 					<>
 						<li><a className='black-text' href="collapsible.html">Create Post</a></li>
