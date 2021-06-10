@@ -15,15 +15,17 @@ class FollowProfileButton extends Component {
       <div className="d-inline-block">
         {!this.props.following ? (
       <button
+        style={{margin: '10px'}}
         onClick={this.followClick}
-        className="btn btn-outline-success btn-raised mr-5"
+        className="btn waves-effect waves-light pink lighten-4 darkPink center"
       >
         Follow
       </button>
       ) : (
       <button
+        style={{margin: '10px'}}
         onClick={this.unfollowClick}
-        className="btn btn-outline-warning btn-raised"
+        className="btn waves-effect waves-light pink lighten-4 darkPink center"
       >
         UnFollow
       </button>

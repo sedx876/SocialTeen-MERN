@@ -58,9 +58,10 @@ const Menu = ({history}) => (
 							</Link>
 						</li>
 
-						<li className="nav-item">
+						<li>
 							<span
-								style={{ cursor: 'pointer', color: '#880e4f', margin: '5px' }} 
+							className='badge pink darken-4'
+								style={{ cursor: 'pointer', color: '#fff', margin: '5px' }} 
 								onClick={() => signout(() => history.push('/'))}>
 								Log Out 
 							</span>

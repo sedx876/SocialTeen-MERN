@@ -11,6 +11,14 @@
     );
 }
 
+.darkPink{
+  color: #8e1438;
+}
+
+.card-title{
+  text-align: center;
+}
+
 /* *{
   margin: 5px;
 } */
@@ -135,8 +143,8 @@ main {
 .profile-card{
   display: flex;
   font-size: 20px;
-  width: 500px;
-  /* height: auto; */
+  /* width: 500px;
+  height: auto; */
   margin: 5px;
 }
 
