@@ -92,7 +92,7 @@ class SinglePost extends Component {
         src={`${process.env.REACT_APP_API_URL}/post/photo/${post._id}`}
         alt={post.title}
         onError={i => (i.target.src = `${DefaultPost}`)}
-        className="img-thunbnail mb-3"
+        className=""
         style={{
           height: '50%',
           width: '50%',
@@ -100,57 +100,57 @@ class SinglePost extends Component {
         }}
       />
         {like ? (
-          <h3 onClick={this.likeToggle}>
+          <h3 className='darkPink' onClick={this.likeToggle}>
             <i
-              className="fa fa-thumbs-up text-success bg-light"
+              className="material-icons darkPink"
               style={{ padding: '10px', borderRadius: '50%' }}
-          />
-					{' '}
-          {likes} Like
+          >thumb_up
+					{' '}</i>
+          {likes} Likes
           </h3>
         ) : (
-        <h3 onClick={this.likeToggle}>
+        <h3 className='darkPink' onClick={this.likeToggle}>
           <i
-            className="fa fa-thumbs-up text-warning bg-light"
+            className="material-icons darkPink"
             style={{ padding: '10px', borderRadius: '50%' }}
-          />
-					{' '}
-          {likes} Like
+          >thumb_down
+					{' '}</i>
+          {likes} Likes
         </h3>
         )}
-        <p className="card-text">{post.body}</p>
+        <p className="card-text darkPink" style={{fontSize: '20px'}}>{post.body}</p>
         <br />
         <p className="font-italic mark">
           Posted by <Link to={`${posterId}`}>{posterName} </Link>
           on {new Date(post.created).toDateString()}
         </p>
         <div className="d-inline-block">
-          <Link to={`/`} className="btn btn-raised btn-primary btn-sm mr-5">
+          <Link to={`/posts`} className="btn waves-effect waves-light pink lighten-4 darkPink center">
             Back to posts
           </Link>
           {isAuthenticated().user && isAuthenticated().user._id === post.postedBy._id && (
             <>
-              <Link to={`/post/edit/${post._id}`} className="btn btn-raised btn-warning btn-sm mr-5">
+              <Link to={`/post/edit/${post._id}`} className="btn waves-effect waves-light pink lighten-4 darkPink center">
                 Update Post
               </Link>
-              <button onClick={this.deleteConfirmed} className="btn btn-raised btn-danger">
+              <button onClick={this.deleteConfirmed} className="btn pink darken-4 white-text">
                 Delete Post
               </button>
             </>
           )}
           <div>
             {isAuthenticated().user && isAuthenticated().user.role === 'admin' && (
-              <div class="card mt-5">
+              <div class="card pink lighten-2 center">
                 <div className="card-body">
                   <h5 className="card-title">Admin</h5>
-                  <p className="mb-2 text-danger">Edit/Delete as an Admin</p>
+                  <p className="">Edit/Delete as an Admin</p>
                   <Link
                     to={`/post/edit/${post._id}`}
-                    className="btn btn-raised btn-warning btn-sm mr-5"
+                    className="btn waves-effect waves-light pink lighten-4 darkPink center"
                   >
                     Update Post
                   </Link>
-                    <button onClick={this.deleteConfirmed} className="btn btn-raised btn-danger">
+                    <button onClick={this.deleteConfirmed} className="btn pink darken-4 white-text">
                       Delete Post
                     </button>
               </div>

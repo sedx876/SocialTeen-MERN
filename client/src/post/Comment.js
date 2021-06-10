@@ -88,7 +88,7 @@ class Comment extends Component {
               className="form-control"
               placeholder="Leave a comment..."
             />
-            <button className="btn btn-raised btn-success mt-2">
+            <button className="btn waves-effect waves-light pink lighten-4 darkPink center">
               Post
             </button>
           </div>
@@ -142,7 +142,7 @@ class Comment extends Component {
                     isAuthenticated().user._id ===
                     comment.postedBy._id && (
                 <>
-                  <button className='btn btn-raised btn-outline-danger btn-sm float-right mr-1'
+                  <button className='btn pink darken-4 white-text'
                     onClick={() =>
                     this.deleteConfirmed(comment)}>
                     Remove
