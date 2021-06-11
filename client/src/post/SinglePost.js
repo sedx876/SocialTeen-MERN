@@ -100,23 +100,23 @@ class SinglePost extends Component {
         }}
       />
         {like ? (
-          <h3 className='darkPink' onClick={this.likeToggle}>
+          <h4 className='darkPink' onClick={this.likeToggle}>
             <i
               className="material-icons darkPink"
               style={{ padding: '10px', borderRadius: '50%' }}
           >thumb_up
 					{' '}</i>
           {likes} Likes
-          </h3>
+          </h4>
         ) : (
-        <h3 className='darkPink' onClick={this.likeToggle}>
+        <h4 className='darkPink' onClick={this.likeToggle}>
           <i
             className="material-icons darkPink"
             style={{ padding: '10px', borderRadius: '50%' }}
           >thumb_down
 					{' '}</i>
           {likes} Likes
-        </h3>
+        </h4>
         )}
         <p className="card-text darkPink" style={{fontSize: '20px'}}>{post.body}</p>
         <br />

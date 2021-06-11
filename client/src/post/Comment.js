@@ -78,14 +78,14 @@ class Comment extends Component {
     const { error } = this.state
     return (
       <div>
-        <h2 className="mt-5 mb-5">Leave a comment</h2>
+        <h2 className="center darkPink">Leave a comment</h2>
         <form onSubmit={this.addComment}>
-          <div className="form-group">
+          <div className="form-group darkPink">
             <input
               type="text"
               onChange={this.handleChange}
               value={this.state.text}
-              className="form-control"
+              className="darkPink"
               placeholder="Leave a comment..."
             />
             <button className="btn waves-effect waves-light pink lighten-4 darkPink center">
@@ -101,14 +101,16 @@ class Comment extends Component {
           {error}
         </div>
         <div className="col-md-12">
-          <h3 className="text-primary">{comments.length} Comments</h3>
-          <hr />
+          <h3 className="darkPink center">{comments.length} Comments</h3>
+          <hr/>
           {comments.map((comment, i) => (
         <div key={i}>
           <div>
             <Link to={`/user/${comment.postedBy._id}`}>
               <img
                 style={{
+									width: '75px',
+									height: '75px',
                   borderRadius: "50%",
                   border: "1px solid black"
                 }}
@@ -125,10 +127,11 @@ class Comment extends Component {
               />
             </Link>
             <div>
-              <p className="lead">{comment.text}</p>
-              <p className="font-italic mark">
+              <p className="darkPink" style={{fontSize: '20px'}}>{comment.text}</p>
+              <p className="darkPink">
                 Posted by{" "}
               <Link
+								className="darkPink"
                 to={`/user/${comment.postedBy._id}`}
               >
                 {comment.postedBy.name}{" "}

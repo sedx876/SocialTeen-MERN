@@ -136,7 +136,7 @@ class NewPost extends Component{
       }
       return (
         <div>
-          <h2 className="black-text center">Create a New Post</h2>
+          <h2 className="darkPink center">Create a New Post</h2>
           <div
             className="alert alert-danger"
             style={{ display: error ? "" : "none" }}

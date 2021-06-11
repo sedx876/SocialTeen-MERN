@@ -19,9 +19,11 @@ class ProfileTabs extends Component {
                         <Link to={`/user/${person._id}`}>
                           <img
                             style={{
-                              borderRadius: "50%",
-                              border: "1px solid black"
-                            }}
+															width: '75px',
+															height: '75px',
+															borderRadius: "50%",
+															border: "1px solid black"
+														}}
                             className="float-left mr-2"
                             height="30px"
                             width="30px"
@@ -54,10 +56,12 @@ class ProfileTabs extends Component {
                   <Link to={`/user/${person._id}`}>
                     <img
                       style={{
-                        borderRadius: "50%",
-                        border: "1px solid black"
-                      }}
-                      className="float-left mr-2"
+												width: '75px',
+												height: '75px',
+												borderRadius: "50%",
+												border: "1px solid black"
+											}}
+                      className="center"
                       height="30px"
                       width="30px"
                       onError={i =>

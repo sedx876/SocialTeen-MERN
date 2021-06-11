@@ -85,20 +85,25 @@ class EditPost extends Component {
   }
 
   editPostForm = (title, body) => (
+    <>
     <form>
 
-      <div className="form-group">
-        <label className="text-muted">Post Photo</label>
-        <input
-          onChange={this.handleChange("photo")}
-          type="file"
-          accept="image/*"
-          className="form-control"
-        />
-
+    <div class="file-field input-field">
+        <div class="btn waves-effect waves-light pink lighten-4 black-text center">
+        <span>File</span>
+        <input onChange={this.handleChange("photo")}
+            type="file"
+            accept="image/*"
+            className="form-control"/>
+        </div>
+        <div class="file-path-wrapper">
+        <input class="file-path validate" type="text"/>
       </div>
+     </div>
+
+      
       <div className="form-group">
-        <label className="text-muted">Title</label>
+        <label className="darkPink">Title</label>
         <input
           onChange={this.handleChange("title")}
           type="text"
@@ -108,7 +113,7 @@ class EditPost extends Component {
       </div>
 
       <div className="form-group">
-        <label className="text-muted">Body</label>
+        <label className="darkPink">Body</label>
         <textarea
           onChange={this.handleChange("body")}
           type="text"
@@ -117,13 +122,19 @@ class EditPost extends Component {
         />
       </div>
 
+      <div className='center'>
       <button
+        style={{margin: '10px'}}
         onClick={this.clickSubmit}
-        className="btn btn-raised btn-primary"
+        className="btn waves-effect waves-light pink lighten-4 darkPink center"
       >
         Update Post
       </button>
+      </div>
+
+      
     </form>
+    </>
   )
   render() {
     const {
@@ -165,8 +176,7 @@ class EditPost extends Component {
           />
             {isAuthenticated().user.role === "admin" &&
               this.editPostForm(title, body)}
-                {isAuthenticated().user._id === id &&
-                  this.editPostForm(title, body)}
+                
         </div>
       )
     }
